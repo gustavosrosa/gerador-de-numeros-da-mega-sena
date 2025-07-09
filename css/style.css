@@ -52,11 +52,20 @@ p {
     gap: 1em;
 }
 
-.number {
+.number-box {
     width: var(--size-numbers);
     height: var(--size-numbers);
     background-color: var(--color-numbers-buttons);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    color: var(--color-white);
+    font-size: 2em;
+    font-weight: bold;
 }
 
 button {
