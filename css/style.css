@@ -1,5 +1,124 @@
+:root {
+    --color-background-main: #E0E0E0;
+    --color-white: #FFFFFF;
+    --color-numbers-buttons: #FE3B08;
+    --color-button-hover: #D12D04;
+    --size-numbers: 3.5em;
+    --gap-padding-container: 2em;
+    --box-shadow-container: rgba(0,0,0,.2);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-background-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 35em;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--gap-padding-container) 0;
+    gap: var(--gap-padding-container);
+    padding: var(--gap-padding-container);
+    box-shadow: 0px 0px 10px var(--box-shadow-container);
+}
+
+h1 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+p {
+    font-size: .9em;
+    font-weight: normal;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.number {
+    width: var(--size-numbers);
+    height: var(--size-numbers);
+    background-color: var(--color-numbers-buttons);
+    border-radius: 50%;
+}
+
+button {
+    color: var(--color-white);
+    background-color: var(--color-numbers-buttons);
+    padding: .5em;
+    border: none;
+    transition: 1s;
+    border-radius: .5em;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+    transition: 1s;
+}
+
+
+@media (min-width: 200px) and (max-width: 380px) {
+
+    .container {
+        width: 17.5em;
+    }
+
+    .numbers {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+
+}
+
+@media (min-width: 381px) and (max-width: 545px) {
+
+    .container {
+        width: 20.5em;
+    }
+
+    .numbers {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        place-self: center;
+        justify-items: center;
+    }
+
+}
+
+@media (min-width: 546px) and (max-width: 600px) {
+
+    .container {
+        width: 25.5em;
+    }
+
+    .numbers {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+
 }
