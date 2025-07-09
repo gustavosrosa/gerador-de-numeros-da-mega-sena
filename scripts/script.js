@@ -9,7 +9,7 @@ btnElement.addEventListener("click", () => {
 
     assignElementsInFrontView(numberList);
 
-})
+});
 
 function generateNumbers() {
 
@@ -23,11 +23,11 @@ function generateNumbers() {
             randomNumber = callMathToNewNumber();
         }
 
-        numberList.push(randomNumber)
+        numberList.push(randomNumber);
 
     }
 
-    numberList.sort((a, b) => a - b)
+    numberList.sort((a, b) => a - b);
     numberList = normalizeNumbers(numberList);
 
     return numberList;
@@ -43,7 +43,7 @@ function normalizeNumbers(list) {
 
     list.forEach(element => {
         element = String(element).padStart(2, "0");
-        normalizedList.push(element)
+        normalizedList.push(element);
     });
 
     return normalizedList;
@@ -53,7 +53,7 @@ function normalizeNumbers(list) {
 function assignElementsInFrontView(numberList) {
 
     for (let i = 0; i < numberList.length; i++) {
-        numberBoxElement[i].innerHTML = ""
+        numberBoxElement[i].innerHTML = "";
         let newRandomNumber = document.createElement("p");
 
         newRandomNumber.textContent = numberList[i];
